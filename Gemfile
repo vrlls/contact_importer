@@ -25,6 +25,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'pry', '~> 0.13.1'
+gem "rubocop", "~> 1.20" # Review style
+gem 'devise'
+gem 'kaminari' # Pagination
+gem "aws-sdk-s3", require: false
+gem 'csv'
+gem "pg", "~> 1.1"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
