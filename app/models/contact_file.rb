@@ -8,7 +8,6 @@ class ContactFile < ApplicationRecord
   private
   
   def generate_contacts
-    binding.pry
     ContactCreator.new(id).call
   end
 end
