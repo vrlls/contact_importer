@@ -1,0 +1,8 @@
+<h1>Contacts</h1>
+<%= render @contacts unless @contacts.nil? %>
+
+<span>Import more contacts</span>
+<br>
+<div>
+  <%= link_to "New request", new_contact_file_path%>
+</div>
