@@ -11,6 +11,7 @@ class ContactCreator < ApplicationService
   end
 
   def call
+    @contact_file.update(status: "Processing")
     Contact.transaction do
       file.each do |row|
         binding.pry

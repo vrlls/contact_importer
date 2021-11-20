@@ -8,6 +8,8 @@ class ContactFile < ApplicationRecord
   private
   
   def generate_contacts
+    self.update(status: "On Hold")
     ContactCreator.new(id).call
+    self.update(status: "Finished")
   end
 end
