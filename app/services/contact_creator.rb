@@ -31,10 +31,11 @@ class ContactCreator < ApplicationService
             ContactLog.create!(elements: row.to_s, error: e.to_s, user: User.find(@contact_file.user.id))
           end
         end
+        @contact_file.update(status: "Finished")
       else
-        cont = 1
+        @contact_file.update(status: "Finished")
       end
     end
-    cont
+    @contact_file.update(status: "Failed") if cont == 0
   end
 end
