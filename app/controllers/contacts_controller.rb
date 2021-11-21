@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   # end
 
   def index
-    @contacts = current_user.contacts
+    @contacts = current_user.contacts.page params[:page]
   end
 
   # private

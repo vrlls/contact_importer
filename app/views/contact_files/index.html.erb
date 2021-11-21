@@ -1,6 +1,8 @@
 <h1>Contact files</h1>
 <%= render @contact_files unless @contact_files.nil? %>
 
+<%= paginate @contact_files %>
+
 <%= link_to "New request", new_contact_file_path%>
 <br>
 <%= link_to "See contacts", root_path%>

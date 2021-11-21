@@ -1,8 +1,15 @@
 <h1>Contacts</h1>
 <%= render @contacts unless @contacts.nil? %>
+<%= paginate @contacts %>
 <br>
 <span>Import more contacts</span>
 <br>
 <div>
   <%= link_to "New request", new_contact_file_path%>
+</div>
+<br>
+<span>See imported files</span>
+<br>
+<div>
+  <%= link_to "Contact files", contact_files_path%>
 </div>

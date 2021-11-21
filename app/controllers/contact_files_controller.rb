@@ -6,7 +6,7 @@ class ContactFilesController < ApplicationController
   respond_to :html
 
   def index
-    @contact_files = current_user.contact_files
+    @contact_files = current_user.contact_files.page params[:page]
   end
 
   def show; end
