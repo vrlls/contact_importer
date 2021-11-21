@@ -4,6 +4,7 @@ RSpec.describe User, type: :model do
   describe "asosciations" do
     it { is_expected.to have_many(:contact_files) }
     it { is_expected.to have_many(:contacts) }
+    it { is_expected.to have_many(:contact_logs) }
   end
 
   describe "validatations" do

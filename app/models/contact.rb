@@ -8,6 +8,7 @@ class Contact < ApplicationRecord
   validates :phone, presence: true, format: { with: /(\({1}\+{1}\d{2}\){1})\s?-?(\d{3})\s?-?(\d{3})\s?-?(\d{2})\s?-?(\d{2})/}
   validates :address, presence: true
   validates :credit_card, presence: true, credit_card_number: true
+  validates :email, uniqueness: { scope: :user_id}
 
   encrypts :credit_card
 

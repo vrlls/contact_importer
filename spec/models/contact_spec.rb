@@ -6,11 +6,13 @@ RSpec.describe Contact, type: :model do
   end
 
   describe "validations" do
+    let(:contact) { create(:contact) }
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:date_of_birth) }
     it { is_expected.to validate_presence_of(:phone) }
     it { is_expected.to validate_presence_of(:address) }
     it { is_expected.to validate_presence_of(:credit_card) }
+    it { expect(contact).to validate_uniqueness_of(:email).scoped_to(:user_id) }
   end
 
   describe "callbacks" do

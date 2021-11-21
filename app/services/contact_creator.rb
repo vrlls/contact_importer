@@ -10,24 +10,31 @@ class ContactCreator < ApplicationService
   end
 
   def call
+    cont = 0
     @contact_file.update(status: "Processing")
     Contact.transaction do
-      file.each do |row|
-        begin
-          contact = Contact.new
-          contact.name = row[@contact_file.alias_name]
-          contact.date_of_birth = row[@contact_file.alias_date_of_birth]
-          contact.phone = row[@contact_file.alias_phone]
-          contact.credit_card = row[@contact_file.alias_credit_card]
-          contact.email = row[@contact_file.alias_email]
-          contact.address = row[@contact_file.alias_address]
-          contact.franchise = ""
-          contact.user = User.find(@contact_file.user.id)
-          contact.save!
-        rescue => e
-          puts e
+      unless file.empty?
+        file.each do |row|
+          begin
+            contact = Contact.new
+            contact.name = row[@contact_file.alias_name]
+            contact.date_of_birth = row[@contact_file.alias_date_of_birth]
+            contact.phone = row[@contact_file.alias_phone]
+            contact.credit_card = row[@contact_file.alias_credit_card]
+            contact.email = row[@contact_file.alias_email]
+            contact.address = row[@contact_file.alias_address]
+            contact.franchise = ""
+            contact.user = User.find(@contact_file.user.id)
+            contact.save!
+            cont += 1
+          rescue => e
+            ContactLog.create!(elements: row.to_s, error: e.to_s, user: User.find(@contact_file.user.id))
+          end
         end
+      else
+        cont = 1
       end
     end
+    cont
   end
 end

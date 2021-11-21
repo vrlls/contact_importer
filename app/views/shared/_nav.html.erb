@@ -1,0 +1,19 @@
+<nav class="be-red white large-padding">
+    <ul class="no-list row center-xs middle-xs">
+      <li class="col-md">
+        <%= link_to "Contact importer", root_path, class:"no-margin", id:"logo"%>
+      </li>
+      <% if user_signed_in? %>
+        <li class="col-md">
+          <%= link_to "Log-out", destroy_user_session_path, method: :delete %> <!-- Path log out-->
+        </li>
+      <% else %>
+        <li class="col-md">
+          <%= link_to "Log-in", new_user_session_path %> <!-- Path log in-->
+        </li>
+        <li class="col-md">
+          <%= link_to "Sign-up", new_user_registration_path %> <!-- Path Sign up-->
+        </li>
+      <% end %>
+    </ul>
+</nav>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contact_logs, only: [:index]
   # resources :contacts, only: [:show]
   resources :contact_files, except: [:update, :destroy, :edit]
   devise_for :users
