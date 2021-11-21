@@ -1,3 +1,8 @@
+<h1>Import contact forms</h1>
+
+  <p>Write the alias that each field receives in your contact file, the fields that do not 
+  change do not edit them, please.</p>
+
 <%= form_for [@contact_file] do |form| %>
   <% if @contact_file.errors.any? %>
     <div id="error_explanation">
@@ -11,42 +16,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :alias_name %>
-    <%= form.text_field :alias_name %>
+  
+
+  <div class="mb-3">
+    <%= form.label :alias_name,"The alias for the name in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :alias_date_of_birth %>
-    <%= form.text_field :alias_date_of_birth %>
+  <div class="mb-3">
+    <%= form.label :alias_date_of_birth,"The alias for the date of birth in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_date_of_birth, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :alias_phone %>
-    <%= form.text_field :alias_phone %>
+  <div class="mb-3">
+    <%= form.label :alias_phone,"The alias for the phone number in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_phone, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :alias_address %>
-    <%= form.text_field :alias_address %>
+  <div class="mb-3">
+    <%= form.label :alias_address,"The alias for the address in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_address, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :alias_credit_card %>
-    <%= form.text_field :alias_credit_card %>
+  <div class="mb-3">
+    <%= form.label :alias_credit_card,"The alias for the credit card number in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_credit_card, class: "form-control" %>
   </div>
   
-  <div class="field">
-    <%= form.label :alias_email %>
-    <%= form.text_field :alias_email %>
+  <div class="mb-3">
+    <%= form.label :alias_email,"The alias for the email in your contacts file", class: "form-label" %>
+    <%= form.text_field :alias_email, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :csv %>
-    <%= form.file_field :csv %>
+  <div class="mb-3">
+    <%= form.label :csv,"Upload you csv file" %>
+    <%= form.file_field :csv, class: "form-control-file" %>
+    <div class="form-text">The credti card numbers will be encrypted.</div>
   </div>
-    
+  
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+<br>
+<%= link_to "Contact files", contact_files_path, class: "btn btn-primary"%>
+<%= link_to "Contacts", root_path, class: "btn btn-primary"%>

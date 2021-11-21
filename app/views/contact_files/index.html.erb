@@ -1,8 +1,17 @@
 <h1>Contact files</h1>
-<%= render @contact_files unless @contact_files.nil? %>
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">File name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Upload date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @contact_files unless @contact_files.nil? %>
+  </tbody>
+</table>
 <%= paginate @contact_files %>
 
-<%= link_to "New request", new_contact_file_path%>
-<br>
-<%= link_to "See contacts", root_path%>
+<%= link_to "Import contacts", new_contact_file_path, class: "btn btn-primary"%>
+<%= link_to "See contacts", root_path, class: "btn btn-primary"%>
