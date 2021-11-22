@@ -106,7 +106,7 @@ The first view is the list of your contacts. In this view, you can see your cont
 
 ![image](https://user-images.githubusercontent.com/30907860/142869357-c29307c2-c596-482b-8a10-1dcf2ee0e7ac.png)
 
-In the import view you can see a form where each field is the way you name each field of your Contact list, as default the form have values, if some of your fields are similar don't change the value, and then select the file from your computer and press submit.
+In the import view you can see a form where each field is the way you name each field of your contact list, modify them to match, by default the form has values, if some of your fields are similar don't change the value, and then select the file from your computer and press send.
 
 ![image](https://user-images.githubusercontent.com/30907860/142869420-c3ed4ba0-7916-4eea-87cb-545565a9321e.png)
 
