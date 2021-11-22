@@ -100,7 +100,7 @@ Password: sidekiq
 email: trainer@koombea.com
 password: 123456
 
-In the root of the project there is a test-file folder with 3 csv documents. Test.csv which generates successful and failed contacts, test_empty.csv which is an empty file with only the headers and test_fail_all.csv which contains records that will fail completely.
+In the root of the project there is a test-file folder with 3 csv documents. prueba.csv which generates successful and failed contacts, prueba_empty.csv which is an empty file with only the headers and prueba_fail_all.csv which contains records that will fail completely.
 
 ## User manual.
 
