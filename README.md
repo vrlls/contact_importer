@@ -14,7 +14,7 @@ Show The list of imported contacts from your uploaded CSVs files.
 
 ### List CSV files.
 
-Show a list of all the CSVs files that you have uploaded to the app, the uploaded data, and their status in the system (on hold, processing, failed)
+Show a list of all the CSVs files that you have uploaded to the app, the uploaded data, and their status in the system (on hold, processing, failed, finished)
 
 ### List of failed imported contacts.
 
