@@ -1,3 +1,3 @@
 class Contact < ApplicationRecord
-  has_one :credit_card
+  belongs_to :user
 end

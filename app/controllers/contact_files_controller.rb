@@ -28,6 +28,8 @@ class ContactFilesController < ApplicationController
   end
 
   def contact_file_params
-    params.require(:contact_file).permit(:csv)
+    params.require(:contact_file).permit(:alias_name, :alias_email, :alias_phone,
+                                         :alias_address, :alias_date_of_birth,
+                                         :alias_credit_card, :csv)
   end
 end
