@@ -4,6 +4,7 @@ class ContactCreator < ApplicationService
   attr_accessor :params, :file
 
   def initialize(params)
+
     @params = params
     @contact_file = ContactFile.find(params)
     @file = CSV.parse(@contact_file.csv.download, headers: true)

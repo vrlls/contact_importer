@@ -19,6 +19,7 @@ class ContactFilesController < ApplicationController
     @contact_file = current_user.contact_files.create(contact_file_params)
     flash[:notice] = 'Contact file was successfully created.' if @contact_file.save
     redirect_to contact_files_path
+
   end
 
   private

@@ -1,8 +1,8 @@
+
 <h1>Import contact forms</h1>
 
   <p>Write the alias that each field receives in your contact file, the fields that do not 
   change do not edit them, please.</p>
-
 <%= form_for [@contact_file] do |form| %>
   <% if @contact_file.errors.any? %>
     <div id="error_explanation">
@@ -15,8 +15,6 @@
       </ul>
     </div>
   <% end %>
-
-  
 
   <div class="mb-3">
     <%= form.label :alias_name,"The alias for the name in your contacts file", class: "form-label" %>

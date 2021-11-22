@@ -10,5 +10,6 @@ class ContactFile < ApplicationRecord
   def generate_contacts
     self.update(status: "On Hold")
     ImportContactJob.perform_later(id)
+
   end
 end
