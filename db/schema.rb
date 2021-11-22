@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_180901) do
+ActiveRecord::Schema.define(version: 2021_11_19_232928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 2021_11_19_180901) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "alias_name", default: "name"
+    t.string "alias_date_of_birth", default: "date_of_birth"
+    t.string "alias_phone", default: "phone"
+    t.string "alias_address", default: "address"
+    t.string "alias_credit_card", default: "credit_card"
+    t.string "alias_franchise", default: "franchise"
+    t.string "alias_email", default: "email"
+    t.string "status"
     t.index ["user_id"], name: "index_contact_files_on_user_id"
   end
 
@@ -55,19 +63,14 @@ ActiveRecord::Schema.define(version: 2021_11_19_180901) do
     t.date "date_of_birth", null: false
     t.string "phone", null: false
     t.string "address", null: false
-    t.bigint "credit_card_id", null: false
+    t.string "credit_card", null: false
+
     t.string "franchise", null: false
     t.string "email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["credit_card_id"], name: "index_contacts_on_credit_card_id"
-  end
-
-  create_table "credit_cards", force: :cascade do |t|
-    t.string "number", null: false
-    t.string "franchise", default: "", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,5 +88,6 @@ ActiveRecord::Schema.define(version: 2021_11_19_180901) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contact_files", "users"
-  add_foreign_key "contacts", "credit_cards"
+  add_foreign_key "contacts", "users"
+
 end

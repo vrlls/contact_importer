@@ -10,6 +10,37 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :alias_name %>
+    <%= form.text_field :alias_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alias_date_of_birth %>
+    <%= form.text_field :alias_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alias_phone %>
+    <%= form.text_field :alias_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alias_address %>
+    <%= form.text_field :alias_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alias_credit_card %>
+    <%= form.text_field :alias_credit_card %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :alias_email %>
+    <%= form.text_field :alias_email %>
+  </div>
+
   <div class="field">
     <%= form.label :csv %>
     <%= form.file_field :csv, as: :file %>
