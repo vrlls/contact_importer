@@ -36,6 +36,8 @@ Sidekiq
 
 Bootstrap 5
 
+bucket S3
+
 ## Installation.
 
 ```sh
