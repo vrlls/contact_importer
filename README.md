@@ -90,10 +90,23 @@ If you open the app in the browser
 
 To use the app you have to create a user account with your email and password, then you can log in.
 
+![image](https://user-images.githubusercontent.com/30907860/142869257-d254542c-cea8-42e9-a7c8-a96042df42d3.png)
+
+
 The first view is the list of your contacts. In this view, you can see your contacts and have the options to import more contacts, see the list of uploaded files and the list of failed contacts.
+
+![image](https://user-images.githubusercontent.com/30907860/142869357-c29307c2-c596-482b-8a10-1dcf2ee0e7ac.png)
 
 In the import view you can see a form where each field is the way you name each field of your Contact list, as default the form have values, if some of your fields are similar don't change the value, and then select the file from your computer and press submit.
 
+![image](https://user-images.githubusercontent.com/30907860/142869420-c3ed4ba0-7916-4eea-87cb-545565a9321e.png)
+
+
 The Contact fields view shows you the list of all the files you have uploaded to the app and their status in the system.
 
+![image](https://user-images.githubusercontent.com/30907860/142869481-a69baaf7-ea9a-408c-80fd-c13142adf43b.png)
+
 The contact logs view shows the list of contacts that failed to be created and the reason why they failed. Take advantage of this view to make corrections to your records.
+
+![image](https://user-images.githubusercontent.com/30907860/142869569-2ec4851c-1d24-4121-b688-49a95b33b679.png)
+
