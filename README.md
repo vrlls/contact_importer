@@ -59,6 +59,7 @@ https://sebas-contact-importer.herokuapp.com/
 
 ### For local:
 
+1. Move to the proyect
 ```sh
 cd contact_importer
 ```
@@ -69,15 +70,17 @@ If its the first time you run the app:
 rake db:migrate
 ```
 
-2. inside the proyect run and in a new terminal
+2. Open a new terminal and run
+```sh
+ redis-server
+```
+
+3. inside the proyect run and in a new terminal
 ```sh
  sidekiq
 ```
 
-4. Open a new terminal and run
-```sh
- redis-server
-```
+
 6. Run
 ```sh
  rails s
@@ -85,11 +88,12 @@ rake db:migrate
 
 If you open the app in the browser
 
-1. Run redis-server in your local at port 6379
+You can view the processing background job at 
 
-```sh
- redis-server
-```
+https://sebas-contact-importer.herokuapp.com/sidekiq
+
+User: sidekiq
+Password: sidekiq
 
 ## User manual.
 
