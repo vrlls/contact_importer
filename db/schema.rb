@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_11_20_210103) do
+=======
+ActiveRecord::Schema.define(version: 2021_11_19_232928) do
+>>>>>>> 14113d932c427f76bb790919988a030a43227207
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_11_20_210103) do
     t.index ["user_id"], name: "index_contact_files_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "contact_logs", force: :cascade do |t|
     t.text "elements"
     t.string "error"
@@ -67,18 +72,27 @@ ActiveRecord::Schema.define(version: 2021_11_20_210103) do
     t.index ["user_id"], name: "index_contact_logs_on_user_id"
   end
 
+=======
+>>>>>>> 14113d932c427f76bb790919988a030a43227207
   create_table "contacts", force: :cascade do |t|
     t.string "name", null: false
     t.date "date_of_birth", null: false
     t.string "phone", null: false
     t.string "address", null: false
     t.string "credit_card", null: false
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14113d932c427f76bb790919988a030a43227207
     t.string "franchise", null: false
     t.string "email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+<<<<<<< HEAD
     t.text "credit_card_ciphertext"
+=======
+>>>>>>> 14113d932c427f76bb790919988a030a43227207
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
@@ -97,6 +111,11 @@ ActiveRecord::Schema.define(version: 2021_11_20_210103) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contact_files", "users"
+<<<<<<< HEAD
   add_foreign_key "contact_logs", "users"
   add_foreign_key "contacts", "users"
+=======
+  add_foreign_key "contacts", "users"
+
+>>>>>>> 14113d932c427f76bb790919988a030a43227207
 end
