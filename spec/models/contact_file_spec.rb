@@ -15,7 +15,7 @@ RSpec.describe ContactFile, type: :model do
           allow(contact_file).to receive(:generate_contacts)
         end
         
-        it { expect(contact_file.generate_contacts).not_to eq("") }
+        it { }
       end
     end
   end
