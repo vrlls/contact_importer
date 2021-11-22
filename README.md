@@ -86,7 +86,7 @@ rake db:migrate
  rails s
 ```
 
-If you open the app in the browser
+### If you open the app in the browser
 
 You can view the processing background job at 
 
@@ -94,6 +94,13 @@ https://sebas-contact-importer.herokuapp.com/sidekiq
 
 User: sidekiq
 Password: sidekiq
+
+## For the evaluator
+
+email: trainer@koombea.com
+password: 123456
+
+In the root of the project there is a test-file folder with 3 csv documents. Test.csv which generates successful and failed contacts, test_empty.csv which is an empty file with only the headers and test_fail_all.csv which contains records that will fail completely.
 
 ## User manual.
 
