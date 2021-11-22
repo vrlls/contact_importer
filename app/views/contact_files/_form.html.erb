@@ -1,0 +1,21 @@
+<%= form_for [@contact_file] do |form| %>
+  <% if @contact_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact_file.errors.count, "error") %> prohibited this contact_file from being saved:</h2>
+
+      <ul>
+        <% contact_file.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :csv %>
+    <%= form.file_field :csv, as: :file %>
+  </div>
+    
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
