@@ -34,6 +34,7 @@ class ContactCreator < ApplicationService
         end
         @contact_file.update(status: "Finished")
       else
+        cont += 1
         @contact_file.update(status: "Finished")
       end
     end
