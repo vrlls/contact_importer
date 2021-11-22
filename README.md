@@ -1,24 +1,5 @@
-# README
+# This is not the final and stable version
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The branch where everything was developed is the master branch, there you will find the Readme adn the complete program.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/vrlls/contact_importer/tree/master
