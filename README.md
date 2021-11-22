@@ -28,11 +28,13 @@ Implement background jobs via sidekiq and redis
 
 Ruby 3.0
 
-Rails 6.1.2
+Rails 6.1.4.1
 
 pg 1.1
 
 Sidekiq
+
+Bootstrap 5
 
 ## Installation.
 
