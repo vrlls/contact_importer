@@ -40,8 +40,13 @@ bucket S3
 
 ## Installation.
 
+From the master branch
 ```sh
 git clone https://github.com/vrlls/contact_importer.git
+```
+
+```sh
+git pull origin master
 ```
 
 ### Or
