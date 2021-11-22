@@ -11,4 +11,5 @@ class ContactFile < ApplicationRecord
     binding.pry
     ContactCreator.new(id).call
   end
+
 end

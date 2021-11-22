@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_232928) do
     t.string "phone", null: false
     t.string "address", null: false
     t.string "credit_card", null: false
+
     t.string "franchise", null: false
     t.string "email", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -88,4 +89,5 @@ ActiveRecord::Schema.define(version: 2021_11_19_232928) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contact_files", "users"
   add_foreign_key "contacts", "users"
+
 end
