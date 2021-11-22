@@ -14,7 +14,7 @@ Show The list of imported contacts from your uploaded CSVs files.
 
 ### List CSV files.
 
-Show a list of all the CSVs files that you have uploaded to the app, the uploaded data, and their status in the system (on hold, processing, failed)
+Show a list of all the CSVs files that you have uploaded to the app, the uploaded data, and their status in the system (on hold, processing, failed, finished)
 
 ### List of failed imported contacts.
 
@@ -28,11 +28,15 @@ Implement background jobs via sidekiq and redis
 
 Ruby 3.0
 
-Rails 6.1.2
+Rails 6.1.4.1
 
 pg 1.1
 
 Sidekiq
+
+Bootstrap 5
+
+bucket S3
 
 ## Installation.
 
