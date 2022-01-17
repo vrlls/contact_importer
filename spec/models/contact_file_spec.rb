@@ -10,10 +10,12 @@ RSpec.describe ContactFile, type: :model do
     describe "after create commit" do
       describe "#generate_contacts" do
         let(:contact_file) { create(:contact_file) }
-
-        before { allow(contact_file).to receive(:generate_contacts) }
+        before do
+          allow(contact_file).to receive(:update)
+          allow(contact_file).to receive(:generate_contacts)
+        end
         
-        it {}
+        it { }
       end
     end
   end

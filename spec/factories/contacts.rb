@@ -1,11 +1,12 @@
 FactoryBot.define do
   factory :contact do
-    name { "MyString" }
-    date_of_birth { "2021-11-19" }
-    phone { "MyString" }
+    user
+    name { Faker::Name.unique.name }
+    date_of_birth { Faker::Date.in_date_period(year: 2000) }
+    phone { "(+57) 304 602 88 93" }
     address { "MyString" }
-    credit_card { nil }
-    franchise { "MyString" }
-    email { "MyString" }
+    credit_card { "30569309025904" }
+    franchise { "" }
+    email { "MyString@gamil.com" }
   end
 end

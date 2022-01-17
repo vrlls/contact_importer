@@ -1,0 +1,16 @@
+<h1>Contact Logs</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Elements</th>
+      <th scope="col">Error</th>
+      <th scope="col">Upload date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @contact_logs unless @contact_logs.nil? %>
+  </tbody>
+</table>
+<%= paginate @contact_logs %>
+
+<%= link_to "Contacts", root_path, class: "btn btn-primary"%>

@@ -6,7 +6,7 @@ class ContactFilesController < ApplicationController
   respond_to :html
 
   def index
-    @contact_files = current_user.contact_files
+    @contact_files = current_user.contact_files.page params[:page]
   end
 
   def show; end
@@ -18,7 +18,8 @@ class ContactFilesController < ApplicationController
   def create
     @contact_file = current_user.contact_files.create(contact_file_params)
     flash[:notice] = 'Contact file was successfully created.' if @contact_file.save
-    respond_with(@contact_file)
+    redirect_to contact_files_path
+
   end
 
   private

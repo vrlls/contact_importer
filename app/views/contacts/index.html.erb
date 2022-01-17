@@ -1,0 +1,37 @@
+<h1>Contacts</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Daet of birth</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col">Credit Card</th>
+      <th scope="col">Franchise</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @contacts unless @contacts.nil? %>
+  </tbody>
+</table>
+<%= paginate @contacts %>
+<br>
+<span>Import more contacts</span>
+<br>
+<div>
+  <%= link_to "Import contacts", new_contact_file_path, class: "btn btn-primary"%>
+</div>
+<br>
+<span>See imported files</span>
+<br>
+<div>
+  <%= link_to "Contact files", contact_files_path, class: "btn btn-primary"%>
+</div>
+<br>
+<span>See faile imported contacts</span>
+<br>
+<div>
+  <%= link_to "Filed contacts", contact_logs_path, class: "btn btn-primary"%>
+</div>
+
