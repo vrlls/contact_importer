@@ -126,3 +126,9 @@ The contact logs view shows the list of contacts that failed to be created and t
 
 ![image](https://user-images.githubusercontent.com/30907860/142869569-2ec4851c-1d24-4121-b688-49a95b33b679.png)
 
+=======
+# This is not the final and stable version
+
+The branch where everything was developed is the master branch, there you will find the Readme adn the complete program.
+
+https://github.com/vrlls/contact_importer/tree/master
